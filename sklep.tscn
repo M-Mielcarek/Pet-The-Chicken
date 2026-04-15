@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://jel4606td4ex"]
+
+[ext_resource type="PackedScene" uid="uid://dr6u6i48s5iil" path="res://chicken/glb files/podloga.glb" id="1_p1d6j"]
+[ext_resource type="PackedScene" uid="uid://ooq2t7kmhgxb" path="res://chicken/glb files/scianasklep.glb" id="2_lcvd0"]
+[ext_resource type="PackedScene" uid="uid://cgrmroo0tw2jv" path="res://chicken/glb files/ladasklep.glb" id="3_e657m"]
+[ext_resource type="PackedScene" uid="uid://bckgvcbijsd4a" path="res://chicken/glb files/sklepikarz.glb" id="4_jgdac"]
+[ext_resource type="PackedScene" uid="uid://bbgt82hynil8" path="res://chicken/glb files/lampasklep.glb" id="5_0gfnl"]
+[ext_resource type="PackedScene" uid="uid://b4prapc8wa7i5" path="res://chicken/glb files/kasafiskalna.glb" id="6_qstdr"]
+[ext_resource type="PackedScene" uid="uid://b06obe7n371lp" path="res://chicken/glb files/Shelf1.glb" id="7_uhq4y"]
+[ext_resource type="PackedScene" uid="uid://6hyysyejw5q0" path="res://chicken/glb files/Door1.glb" id="8_2l2u7"]
+
+[node name="Node3D" type="Node3D" unique_id=711115505]
+
+[node name="podloga" parent="." unique_id=2134207579 instance=ExtResource("1_p1d6j")]
+transform = Transform3D(1.2978483, 0, 0, 0, 1, 0, 0, 0, 1.4903733, 0, 0, 0)
+
+[node name="podloga2" parent="." unique_id=1475571372 instance=ExtResource("1_p1d6j")]
+transform = Transform3D(1.2942472, 0, 0, 0, 1, 0, 0, 0, 1.4471533, 0, 6.5209684, 0)
+visible = false
+
+[node name="scianasklep" parent="." unique_id=248112157 instance=ExtResource("2_lcvd0")]
+transform = Transform3D(1, 0, 0, 0, 1.7297208, 0, 0, 0, 3.675629, -8.055233, 2.3943176, 0)
+
+[node name="scianasklep2" parent="." unique_id=1583793196 instance=ExtResource("2_lcvd0")]
+transform = Transform3D(1, 0, 0, 0, 1.7137307, 0, 0, 0, 3.6155074, 8.107683, 2.3943176, 0)
+
+[node name="scianasklep3" parent="." unique_id=496427262 instance=ExtResource("2_lcvd0")]
+transform = Transform3D(-4.371139e-08, 0, 3.6316266, 0, 1.3549296, 0, -1, 0, -1.5874345e-07, 0.009754181, 3.3094387, 8.081545)
+
+[node name="scianasklep4" parent="." unique_id=1607280325 instance=ExtResource("2_lcvd0")]
+transform = Transform3D(-4.371139e-08, 0, 3.6395617, 0, 1.7205465, 0, -1, 0, -1.5909029e-07, 0.009754181, 2.3943176, -8.093538)
+
+[node name="ladasklep" parent="." unique_id=822996652 instance=ExtResource("3_e657m")]
+transform = Transform3D(-0.6106409, 0, 6.395387e-08, 0, 0.62824655, 0, -5.338392e-08, 0, -0.73154706, -2.3955247, -0.4088273, 5.5371275)
+
+[node name="sklepikarz" parent="." unique_id=914204954 instance=ExtResource("4_jgdac")]
+transform = Transform3D(-0.09677766, 0, 1.0118636, 0, 1.0828154, 0, -1.1888169, 0, -0.08237248, -4.886057, 0.91833663, 5.997076)
+
+[node name="lampasklep" parent="." unique_id=1067466586 instance=ExtResource("5_0gfnl")]
+transform = Transform3D(-3.6355882e-08, 0, 1, 0, 0.42878705, 0, -0.83172566, 0, -4.371139e-08, 0, 6.0459, 0)
+
+[node name="kasafiskalna" parent="." unique_id=122402841 instance=ExtResource("6_qstdr")]
+transform = Transform3D(-0.43421087, 0, -3.58653e-08, 0, 0.3339506, 0, 3.7959918e-08, 0, -0.4102512, -2.214896, 2.3762748, 5.2462597)
+
+[node name="Shelf2" parent="." unique_id=296450141 instance=ExtResource("7_uhq4y")]
+transform = Transform3D(-4.371139e-08, 0, -1.1961397, 0, 1, 0, 1, 0, -5.2284925e-08, 0.5191817, 0, -7.9447355)
+
+[node name="Shelf1" parent="Shelf2" unique_id=543721079 instance=ExtResource("7_uhq4y")]
+transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 0, 0, 0.83602273, -4.7683716e-07, 0, -4.271266)
+
+[node name="Shelf3" parent="Shelf2/Shelf1" unique_id=205295334 instance=ExtResource("7_uhq4y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1398048, 9.536743e-07, 0, 10.702736)
+
+[node name="Shelf3" parent="." unique_id=970623602 instance=ExtResource("7_uhq4y")]
+transform = Transform3D(-4.3711385e-08, 0, 1.0870976, 0, 1, 0, -0.99999994, 0, -4.7518544e-08, 5.493463, 0, 7.9659414)
+
+[node name="Shelf1" parent="Shelf3" unique_id=1637975802 instance=ExtResource("7_uhq4y")]
+transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 0, 0, 0.83602273, -4.7683716e-07, 0, -4.271266)
+
+[node name="Shelf4" parent="." unique_id=446460428 instance=ExtResource("7_uhq4y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1961397, -7.7492347, 0, -0.36996174)
+
+[node name="Shelf1" parent="Shelf4" unique_id=2055800172 instance=ExtResource("7_uhq4y")]
+transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 0, 0, 0.83602273, -4.7683716e-07, 0, -4.271266)
+
+[node name="Shelf3" parent="Shelf4/Shelf1" unique_id=407673896 instance=ExtResource("7_uhq4y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1398048, 9.536743e-07, 0, 10.702736)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1750181010]
+transform = Transform3D(1, 0, 0, 0, 0.022251157, 0.9997524, 0, -0.9997524, 0.022251157, 0, 5.375373, 0)
+
+[node name="Door1" parent="." unique_id=373268402 instance=ExtResource("8_2l2u7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.116257, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=940511709]
+transform = Transform3D(-0.35618794, -0.13592309, 0.92447555, -0.04886768, 0.99071944, 0.12683468, -0.9331356, 3.992084e-09, -0.35952455, 7.9005594, 3.48593, -0.14188623)
