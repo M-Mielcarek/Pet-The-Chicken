@@ -1,0 +1,32 @@
+~ babcia_quest_dialogue
+if onQuest_babcia == false
+	Babcia: Ah, młodziutki! Wszystkiego najlepszego! Pomógłbyś starszej pani?
+	Ty: Dziękuję! W czym mogę pomóc, pani Krysiu?
+	Babcia: Widzisz, zamówiłam paszę dla moich kurek ale te worki są takie ciężkie!
+	Babcia: Bogumił zazwyczaj dostarcza je osobiście, ale powiedział, że dzisiaj ma dużo pracy.
+	Ty: Zaraz po nie pobiegnę, niech się pani nie martwi.
+	Babcia: Dziękuję, kochaniutki!
+	=> END
+elif onQuest_babcia == true and ziarno < 1
+	Babcia: Wróć jak odbierzesz ziarno od Bogumiła, kochaniutki.
+	Babcia: Powinien być w swoim sklepie.
+	=> END
+elif onQuest_babcia == true and ziarno > 0
+	Babcia: Dziękuję ci bardzo!
+	Babcia: Nie mam już tej siły co kiedyś, a małe kurczęta muszą być karmione nawet 4 razy dziennie.
+	Ty: 4 razy dziennie? To brzmi jak dużo roboty… Co z dorosłymi kurczakami?
+	Babcia: Ah, są absolutnie warte roboty!
+	Babcia: Jak podrosną będą potrzebowały paszy tylko raz albo dwa razy dziennie. 
+	Ty: Dziękuję, pan Bogumił mówił, że wiele mogę się od pani nauczyć.
+	Babcia: To bardzo miłe z jego strony, jeśli chcesz, wpadnij kiedyś na herbatkę, opowiem ci trochę więcej.
+	Babcia: Ah, w ramach podziękowania, możesz wziąć jeden z worków, na pewno ci się przyda.
+	Ty: Dziękuję bardzo, pani Krysiu. Na pewno wpadnę kiedyś na herbatę.
+	=> END
+elif onQuest_Dominik == true and asked_babcia == false
+	Ty: Pani Krysiu, czy miałaby pani jakieś plastikowe butelki?
+	Babcia: Butelki? Czy ten pijak znowu zaczepiał cię o pieniądze?! Nic mu nie dam!
+	=> END
+
+
+
+=> END

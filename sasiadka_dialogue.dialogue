@@ -1,0 +1,38 @@
+~ Sasiadka_quest_dialogue
+
+if onQuest_sasiadka == false
+	Sąsiadka: Hej! Dobrze, że jesteś! Potrzebuję twojej pomocy!
+	Ty: Pomocy? Co się stało? 
+	Sąsiadka: Słuchaj, głupia sprawa… Zapomniałam swojego hasła do komputera.
+	Ty: Jak mogę ci pomóc? Masz jakiś notesik z hasłami?
+	Sąsiadka: No właśnie nie, ale ułożyłam do tego hasła zagadkę. Tylko widzisz, zapomniałam totalnie o co w niej chodziło…
+	Ty: Jak brzmi zagadka?
+	~ Zagadka
+	Sąsiadka: (Insert zagadka)
+
+	~ Again
+	- Ty: Czy mogłabyś powtórzyć zagadkę? => Zagadka
+	- Ty: Chyba znam już rozwiązanie. 
+		- Ty: xd
+		- Ty: dx => popr
+		- Ty: dd
+		- Ty: xx
+
+	Sąsiadka: Hmm… Nie, to nie pasuje. => Again
+	~ popr
+	Sąsiadka: Tak, to jest to! Dziękuję! Jak mogę ci się odwdzięczyć?
+	Ty: Może masz jakieś porady odnośnie trzymania kurczaka?
+	Sąsiadka: Totalnie wypadło mi z głowy, masz dzisiaj urodziny! Znalazłeś już swojego kurczaka?
+	Ty: Tak, ale Bogumił powiedział, że nie odda mi go dopóki nie przejdę jego testu.
+	Sąsiadka: Hah, typowy Bogumił. Mi też robił quiz. Nie pamiętam już, o co mnie pytał, minęło już trochę czasu od tego dnia.
+	Ty: Każda informacja mi się przyda.
+	Sąsiadka: Ah! Już wiem! Na pewno pytał mnie o odpowiednią temperaturę dla kurczaka. To było, hmm, 32 do 35 stopni!
+	Ty: Zapamiętam, dziękuję.
+	Sąsiadka: Już wiem co mogę ci dać na urodziny! Mam farelkę, jest stara ale działa. Ostatnio kupiłam nową i ta już mi się nie przyda.
+	Ty: Nie wiem jak ci dziękować!
+	Sąsiadka: Nie ma sprawy! Powodzenia z kurczakiem!
+	
+elif onQuest_Dominik == true and asked_wet == false
+	Ty: xd
+	Sąsiadka: Butelki…? Nie, nie mam żadnych butelek.
+=> END
