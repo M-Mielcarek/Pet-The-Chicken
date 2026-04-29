@@ -1,0 +1,100 @@
+~ start
+Sklepikarz: Młody! Przyszedłeś w poszukiwaniach swojego kurczaka?
+- Ty: Dzień dobry! Tak, nie mogę się już doczekać!
+	Sklepikarz: Ha ha! Rozejrzyj się po sklepie, jestem pewny, że znajdziesz swoją bratnią duszę! Przy okazji, wszystkiego najlepszego! To już dwadzieścia jeden wiosen…
+	Zadanie: Rozejrzyj się po sklepie.
+- Ty: Kurczaka?
+	Sklepikarz: Ha ha! Chyba jesteś jeszcze trochę zaspany, co? Każdy człowiek w dniu swoich dwudziestych pierwszych urodzin szuka swojej bratniej duszy. Do tej pory, każdy mieszkaniec naszej wsi znalazł ją w kurczaku!
+	- Ty: Ah! Rzeczywiście! Dzisiaj są moje urodziny, zupełnie o tym zapomniałem! Pójdę się rozejrzeć!
+		Zadanie: Rozejrzyj się po sklepie.
+	- Ty: Co…? Przyszedłem tylko po chleb.
+		Zadanie: You screwed up big time.
+if talked_with_chickens == 3
+	Sklepikarz: I co, młody? Który wpadł ci w oko?
+	Ty: *Wzdycha*
+	Ty: No właśnie chyba żaden. Co powinienem teraz zrobić?
+	Sklepikarz: Hmm… Słuchaj, mam jeszcze jednego kurczaka na tyłach sklepu. Ludwik mówi, że nie wróży mu najlepiej. Jest mały i słaby, bez opieki może w każdej chwili umrzeć.
+	Ty: Chciałbym go zobaczyć.
+	Sklepikarz: Chodź za mną.
+=> END
+
+~ int_chicken1
+Kurczak Karol: *dziobie w Twoim kierunku*
+- Ty: Wow! Ten zdecydowanie mnie nie lubi…
+- Ty: Słodki… Ale nie czuję z nim więzi.
+$> talked_with_chickens += 1
+if talked_with_chickens == 3
+	Zadanie: Wróć do Sklepikarza.
+=> END
+
+~ int_chicken2
+Kurczak Karina: *Nie zwraca na ciebie uwagi*
+Ty: Hmm…  Nic szczególnego.
+$> talked_with_chickens += 1
+if talked_with_chickens == 3
+	Zadanie: Wróć do Sklepikarza.
+=> END
+
+~ int_chicken3
+Kurczak Kasia: *gdacze*
+- Ty: Ten też nie wydaje się specjalny…
+- Ty: Ten wygląda jakby chciał przede mną uciec!
+$> talked_with_chickens += 1
+if talked_with_chickens == 3
+	Zadanie: Wróć do Sklepikarza.
+=> END
+
+~ quiz
+if completed_all_quests == true
+	Sklepikarz: Już wróciłeś? Udało ci się wszystko zdobyć?
+	Ty: Tak, mam paszę, kurnik, zagrodę i farelkę.
+	Sklepikarz: I jesteś gotowy na test?
+	Ty: Chyba bardziej gotowy nie będę. 
+	Sklepikarz: No dobrze, to zacznijmy.
+	
+	Sklepikarz: Dlaczego kurom podaje się grit?
+	- Ty: Aby lepiej przyswajały pokarm.
+	- Ty: Aby lepiej rozdrabniały pokarm.
+		$> poprawne_odpowiedzi =+1
+	- Ty: Aby miały więcej energii.
+
+	Sklepikarz: Ile razy dziennie karmi się kurczaki?
+	- Ty: Dorosłe 1-2 razy dziennie, młode 3-4 razy.
+		$> poprawne_odpowiedzi =+1
+	- Ty: Dorosłe 1 dziennie, młode 2.
+	- Ty: Dorosłe 3-4 razy dziennie, młode 5-6.
+
+	Sklepikarz: Jaka jest potrzebna powierzchnia w metrach kwadratowych na jednego kurczaka?
+	- Ty: 7.
+	- Ty: 1.
+	- Ty: 10
+	- Ty: 4.
+		$> poprawne_odpowiedzi =+1
+		
+	Sklepikarz: Jaki przedział temperatury należy zapewnić kurczakowi w pierwszym tygodniu życia?
+	- Ty: 30-32.
+	- Ty: 32-35.
+		$> poprawne_odpowiedzi =+1
+	- Ty: 35-40.
+		
+	Sklepikarz: Aby utrzymać higienę, kurczaki biorą jakie kąpiele?
+	- Ty: W piasku.
+		$> poprawne_odpowiedzi =+1
+	- Ty: W błocie.
+	- Ty: W wodzie.
+	
+	if poprawne_odpowiedzi == 5
+		Sklepikarz: Dobrze się sprawiłeś, kurczak jest twój.
+	else
+		Sklepikarz: Przykro mi, młody. Chyba nie jesteś jeszcze gotowy na posiadanie kurczaka…
+	
+else
+	if on_quest_with_Dominik == true and chuj== false
+		Ty: Czy ma Pan jakieś butelki albo puszki do oddania?
+		Sklepikarz: Pewnie, akurat miałem je wyrzucić. Trzymaj!
+		$> bottles =+5
+		Zadanie: *Otrzymujesz 5 butelek.*
+	else:
+		Sklepikarz: Młody, wróć do mnie jak już będziesz gotowy.
+=> END
+	
