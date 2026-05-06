@@ -13,7 +13,7 @@ elif onQuest_babcia == true and ziarno < 1
 	=> END
 elif onQuest_babcia == true and ziarno > 0
 	Babcia: Dziękuję ci bardzo!
-	Babcia: Nie mam już tej siły co kiedyś, a małe kurczęta muszą być karmione nawet 4 razy dziennie.
+	Babcia: Nie mam już tej siły co kiedyś, a małe kurczęta muszą być karmione nawet 4 razy dziennie. Brakuje mi kogoś do pomocy.
 	Ty: 4 razy dziennie? To brzmi jak dużo roboty… Co z dorosłymi kurczakami?
 	Babcia: Ah, są absolutnie warte roboty!
 	Babcia: Jak podrosną będą potrzebowały paszy tylko raz albo dwa razy dziennie. 
