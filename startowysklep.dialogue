@@ -15,7 +15,7 @@ if talked_with_chickens == 3
 	Ty: No właśnie chyba żaden. Co powinienem teraz zrobić?
 	Sklepikarz: Hmm… Słuchaj, mam jeszcze jednego kurczaka na tyłach sklepu. Ludwik mówi, że nie wróży mu najlepiej. Jest mały i słaby, bez opieki może w każdej chwili umrzeć.
 	Ty: Chciałbym go zobaczyć.
-	Sklepikarz: Chodź za mną.
+	Sklepikarz: To poczekaj tu chwilę.
 => END
 
 ~ int_chicken1
