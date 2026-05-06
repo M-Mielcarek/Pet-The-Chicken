@@ -32,7 +32,8 @@ if onQuest_sasiadka == false
 	Ty: Nie wiem jak ci dziękować!
 	Sąsiadka: Nie ma sprawy! Powodzenia z kurczakiem!
 	
-elif onQuest_Dominik == true and asked_wet == false
-	Ty: xd
+elif onQuest_Dominik == true and asked_sasiadka == false
+	Ty: Aurelio, czy masz może jakieś butelki do oddania?
 	Sąsiadka: Butelki…? Nie, nie mam żadnych butelek.
+	asked_sasiadka == true
 => END
