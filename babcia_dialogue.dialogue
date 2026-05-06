@@ -25,7 +25,11 @@ elif onQuest_babcia == true and ziarno > 0
 elif onQuest_Dominik == true and asked_babcia == false
 	Ty: Pani Krysiu, czy miałaby pani jakieś plastikowe butelki?
 	Babcia: Butelki? Czy ten pijak znowu zaczepiał cię o pieniądze?! Nic mu nie dam!
-	=> END
+else
+	% Babcia: Wpadłbyś kiedyś na herbatke do starszej pani, młodziutki?
+	% Babcia: Ach, młodziutki, tu jesteś! Kliknęłam coś w telefonie i teraz wszystko jest po Chińsku...
+	% Babcia: W krzyżu łupie, w kolanie strzyka. Widzisz, starość nie radość.
+	% Babcia: Zrobiłam trochę za dużo jabłecznika, weź do domu, powiedz mi jak ci smakował!
 
 
 
