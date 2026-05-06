@@ -5,18 +5,18 @@ if onQuest_sasiadka == false
 	Ty: Pomocy? Co się stało? 
 	Sąsiadka: Słuchaj, głupia sprawa… Zapomniałam swojego hasła do komputera.
 	Ty: Jak mogę ci pomóc? Masz jakiś notesik z hasłami?
-	Sąsiadka: No właśnie nie, ale ułożyłam do tego hasła zagadkę. Tylko widzisz, zapomniałam totalnie o co w niej chodziło…
-	Ty: Jak brzmi zagadka?
+	Sąsiadka: No właśnie nie, ale ułożyłam do tego hasła podpowiedź. Tylko widzisz, zapomniałam totalnie o co w niej chodziło…
+	Ty: Jak brzmi podpowiedź?
 	~ Zagadka
-	Sąsiadka: (Insert zagadka)
+	Sąsiadka: Podpowiedź brzmi: Łeóónre.
 
 	~ Again
-	- Ty: Czy mogłabyś powtórzyć zagadkę? => Zagadka
+	- Ty: Czy mogłabyś powtórzyć podpowiedź? => Zagadka
 	- Ty: Chyba znam już rozwiązanie. 
-		- Ty: xd
-		- Ty: dx => popr
-		- Ty: dd
-		- Ty: xx
+		- Ty: Flammea
+		- Ty: Gallina => popr
+		- Ty: Jubatus
+		- Ty: Ailurus
 
 	Sąsiadka: Hmm… Nie, to nie pasuje. => Again
 	~ popr
