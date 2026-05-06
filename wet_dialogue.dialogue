@@ -21,4 +21,9 @@ elif onQuest_wet == true and has_kurczak == false
 elif onQuest_Dominik == true and asked_wet == false
 	Ty: Ludwiku! Czy miałbyś może parę plastikowych butelek?
 	Weterynarz: Butelki, mówisz? Przykro mi, wyrzuciłem je wczoraj.
+else
+	% Weterynarz: Czy wiedziałeś, że kury są dalekimi potomkami dinozaurów?
+	% Weterynarz: Czy wiedziałes, że kury, podobnie jak ludzie, miewają dobre i złe sny?
+	% Weterynarz: Czy wiedziałes, że kury mają swój własny język, który składa się z aż 30 dźwięków?
+	% Weterynarz: Czy wiedziałes, że kury mają doskonałą pamięć? Lepiej im nie podpadać.
 => END
