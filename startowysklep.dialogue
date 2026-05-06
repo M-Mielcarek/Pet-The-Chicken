@@ -89,7 +89,7 @@ if completed_all_quests == true
 		Sklepikarz: Przykro mi, młody. Chyba nie jesteś jeszcze gotowy na posiadanie kurczaka…
 	
 else
-	if on_quest_with_Dominik == true and chuj== false
+	if onQuest_Dominik == true and chuj== false
 		Ty: Czy ma Pan jakieś butelki albo puszki do oddania?
 		Sklepikarz: Pewnie, akurat miałem je wyrzucić. Trzymaj!
 		$> bottles =+5
