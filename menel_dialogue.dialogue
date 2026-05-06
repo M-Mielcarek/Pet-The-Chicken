@@ -16,4 +16,9 @@ elif onQuest_Dominik == true
 	Ty: W sumie to nie. Skoro to tylko jeden kurczak to metr na metr chyba mu starczy, prawda?
 	Dominik: Kierowniku! Bój się boga! Kurczaki potrzebują minimum czterech metrów kwadratowych przestrzeni!
 	Ty: Nie wiedziałem o tym, dziękuję, Dominiku.
+else
+	% Menel: Kiedyś byłem niesamowitym prawnikiem, a potem dostałem strzałą w kolano.
+	% Menel: Kierowniku, zastanawiałeś się kiedyś… Dokąd nocą tupta jeż?
+	% Menel: Kierowniku, poratuj złotóweczką.
+	% Menel: W tym kraju nie ma już pracy dla ludzi z moim wykształceniem. Nikt nie potrafi docenić mojego geniuszu. Widzisz, kiedyś byłem prawnikiem, najlepszym w okolicy, ale żona zabrała wszystko. Dzieci, dom, oszczędności. Och, Aguś, proszę wróć.
 => END
