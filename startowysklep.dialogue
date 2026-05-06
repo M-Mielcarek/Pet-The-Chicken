@@ -45,7 +45,7 @@ if talked_with_chickens == 3
 => END
 
 ~ quiz
-if completed_all_quests == true
+if completed_quests == 3
 	Sklepikarz: Już wróciłeś? Udało ci się wszystko zdobyć?
 	Ty: Tak, mam paszę, kurnik, zagrodę i farelkę.
 	Sklepikarz: I jesteś gotowy na test?
