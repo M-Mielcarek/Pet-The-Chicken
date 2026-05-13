@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c7aodq2iid4e0"]
+
+[ext_resource type="Script" uid="uid://bausbas7f0ads" path="res://dialogues/sklepikarz_dialogue.gd" id="1_5rkdx"]
+
+[node name="Sklepikarz_dialogue" type="Node2D" unique_id=1326632774]
+script = ExtResource("1_5rkdx")
