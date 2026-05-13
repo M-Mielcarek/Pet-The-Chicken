@@ -36,4 +36,9 @@ elif onQuest_Dominik == true and asked_sasiadka == false
 	Ty: Aurelio, czy masz może jakieś butelki do oddania?
 	Sąsiadka: Butelki…? Nie, nie mam żadnych butelek.
 	asked_sasiadka == true
+else
+	% Sąsiadka: Kura jest najlepszym przykładem, do czego doprowadza bliskie współżycie z ludźmi. Zatraciła zupełnie ptasią lekkość i wdzięk.
+	% Sąsiadka: Siadła kura – klap! – na grzędzie, Odpoczywać teraz będzie. Pióra czyści, kuper mości Na swej wielkiej, kurzej włości.
+	% Sąsiadka: Dwie kury, zadarłszy łby do góry, jak to bywa u kur w zwyczaju, wiodły zaciekły spór, gdacząc każda o swoim jaju.
+	% Sąsiadka: Piskląt nie spuszcza z oka Troskliwa pani kwoka. Dzielnie ich nieraz broni, Kota i psa precz odgoni!
 => END
