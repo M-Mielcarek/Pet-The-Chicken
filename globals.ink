@@ -26,3 +26,10 @@ VAR ziarno = 0
 VAR triki_na_trzepaku = false
 
 VAR fed_the_chickens = false
+
+VAR onQuest_sasiadka = false
+VAR completed_sasiadka = false
+
+VAR asked_sasiadka = false
+
+VAR has_heater = false
