@@ -2,43 +2,83 @@
 
 if onQuest_sasiadka == false
 	Sąsiadka: Hej! Dobrze, że jesteś! Potrzebuję twojej pomocy!
-	Ty: Pomocy? Co się stało? 
-	Sąsiadka: Słuchaj, głupia sprawa… Zapomniałam swojego hasła do komputera.
+	Ty: Pomocy? Co się stało?
+	Sąsiadka: Słuchaj, głupia sprawa…
+	Sąsiadka: Zapomniałam swojego hasła do komputera.
 	Ty: Jak mogę ci pomóc? Masz jakiś notesik z hasłami?
-	Sąsiadka: No właśnie nie, ale ułożyłam do tego hasła podpowiedź. Tylko widzisz, zapomniałam totalnie o co w niej chodziło…
+	Sąsiadka: No właśnie nie.
+	Sąsiadka: Ale ułożyłam do tego hasła podpowiedź.
+	Sąsiadka: Tylko widzisz… totalnie zapomniałam, o co w niej chodziło…
 	Ty: Jak brzmi podpowiedź?
+
+	~ onQuest_sasiadka = true
 	~ Zagadka
-	Sąsiadka: Podpowiedź brzmi: Łeóónre.
-
+	Sąsiadka: Podpowiedź brzmi: „Łeóónre”.
 	~ Again
-	- Ty: Czy mogłabyś powtórzyć podpowiedź? => Zagadka
-	- Ty: Chyba znam już rozwiązanie. 
-		- Ty: Flammea
-		- Ty: Gallina => popr
-		- Ty: Jubatus
-		- Ty: Ailurus
 
-	Sąsiadka: Hmm… Nie, to nie pasuje. => Again
+		- Ty: Czy mogłabyś powtórzyć podpowiedź?
+			=> Zagadka
+
+		- Ty: Chyba znam już rozwiązanie.
+			- Ty: Flammea
+				Sąsiadka: Hmm… Nie, to chyba nie to.
+				=> Again
+
+		- Ty: Gallina
+			=> popr
+
+		- Ty: Jubatus
+			Sąsiadka: Nieee… To brzmi zbyt dostojnie.
+			=> Again
+
+		- Ty: Ailurus
+			Sąsiadka: Nie, to zdecydowanie nie to.
+			=> Again
+
 	~ popr
-	Sąsiadka: Tak, to jest to! Dziękuję! Jak mogę ci się odwdzięczyć?
+	Sąsiadka: Tak, to jest to!
+	Sąsiadka: Dziękuję! Jak mogę ci się odwdzięczyć?
 	Ty: Może masz jakieś porady odnośnie trzymania kurczaka?
-	Sąsiadka: Totalnie wypadło mi z głowy, masz dzisiaj urodziny! Znalazłeś już swojego kurczaka?
-	Ty: Tak, ale Bogumił powiedział, że nie odda mi go dopóki nie przejdę jego testu.
-	Sąsiadka: Hah, typowy Bogumił. Mi też robił quiz. Nie pamiętam już, o co mnie pytał, minęło już trochę czasu od tego dnia.
+	Sąsiadka: Totalnie wypadło mi z głowy, że masz dzisiaj urodziny!
+	Sąsiadka: Znalazłeś już swojego kurczaka?
+	Ty: Tak, ale Bogumił powiedział, że nie odda mi go, dopóki nie przejdę jego testu.
+	Sąsiadka: Hah, typowy Bogumił.
+	Sąsiadka: Mi też robił quiz.
+	Sąsiadka: Nie pamiętam już, o co mnie pytał.
+	Sąsiadka: Minęło już trochę czasu od tego dnia.
 	Ty: Każda informacja mi się przyda.
-	Sąsiadka: Ah! Już wiem! Na pewno pytał mnie o odpowiednią temperaturę dla kurczaka. To było, hmm, 32 do 35 stopni!
-	Ty: Zapamiętam, dziękuję.
-	Sąsiadka: Już wiem co mogę ci dać na urodziny! Mam farelkę, jest stara ale działa. Ostatnio kupiłam nową i ta już mi się nie przyda.
-	Ty: Nie wiem jak ci dziękować!
-	Sąsiadka: Nie ma sprawy! Powodzenia z kurczakiem!
-	
+	Sąsiadka: Ah! Już wiem!
+	Sąsiadka: Na pewno pytał mnie o odpowiednią temperaturę dla kurczaka.
+	Sąsiadka: To było… hmm… 32 do 35 stopni!
+	Ty: Zapamiętam. Dziękuję.
+	Sąsiadka: Już wiem, co mogę ci dać na urodziny!
+	Sąsiadka: Mam farelkę.
+	Sąsiadka: Jest stara, ale działa.
+	Sąsiadka: Ostatnio kupiłam nową i ta już mi się nie przyda.
+	Ty: Nie wiem, jak ci dziękować!
+	Sąsiadka: Nie ma sprawy!
+	Sąsiadka: Powodzenia z kurczakiem!
+
+	~ completed_sasiadka = true
+	~ completed_quests += 1
+	~ has_heater = true
+
+	Zadanie ukończone: Pomoc sąsiadce.
+	Zadanie: Otrzymujesz farelkę.
+	=> END
+
 elif onQuest_Dominik == true and asked_sasiadka == false
 	Ty: Aurelio, czy masz może jakieś butelki do oddania?
-	Sąsiadka: Butelki…? Nie, nie mam żadnych butelek.
-	asked_sasiadka == true
+	Sąsiadka: Butelki…?
+	Sąsiadka: Nie, nie mam żadnych butelek.
+	~ asked_sasiadka = true
+	=> END
+
 else
 	% Sąsiadka: Kura jest najlepszym przykładem, do czego doprowadza bliskie współżycie z ludźmi. Zatraciła zupełnie ptasią lekkość i wdzięk.
-	% Sąsiadka: Siadła kura – klap! – na grzędzie, Odpoczywać teraz będzie. Pióra czyści, kuper mości Na swej wielkiej, kurzej włości.
+	% Sąsiadka: Siadła kura — klap! — na grzędzie. Odpoczywać teraz będzie.
+	% Sąsiadka: Pióra czyści, kuper mości na swej wielkiej, kurzej włości.
 	% Sąsiadka: Dwie kury, zadarłszy łby do góry, jak to bywa u kur w zwyczaju, wiodły zaciekły spór, gdacząc każda o swoim jaju.
-	% Sąsiadka: Piskląt nie spuszcza z oka Troskliwa pani kwoka. Dzielnie ich nieraz broni, Kota i psa precz odgoni!
-=> END
+	% Sąsiadka: Piskląt nie spuszcza z oka troskliwa pani kwoka. Dzielnie ich nieraz broni — kota i psa precz odgoni!
+
+	=> END
