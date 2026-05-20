@@ -1,21 +1,26 @@
 ~ start
-if Quest_babcia_done == true and fed_the_chickens == false
-	Ty: Dobrze by było pomóc Pani Krysi.
-	Ty: Biedna, na stare lata dalej sama musi karmić kurczaki.
-	- Nakarm kurczaki
+if completed_babcia == true and fed_the_chickens == false
+	Ty: Dobrze byłoby pomóc pani Krysi.
+	Ty: Biedna… Na stare lata dalej sama musi karmić kurczaki.
+		- Nakarm kurczaki.
 		Ty: Dam wam jeść.
-		Zadanie: *Karmisz kurczaki*
+		Zadanie: *Karmisz kurczaki.*
 		Ty: Jesteście bardzo urocze.
 		Ty: Mam nadzieję, że niedługo też będę mieć małego kurczaczka.
-		Zadanie: *Nachylasz się nad płotem i głaszczesz kurczaka Pani Krysi*
+		Zadanie: *Nachylasz się nad płotem i głaszczesz kurczaka pani Krysi.*
 		Ty: Macie bardzo przyjemne w dotyku pióra.
-		fed_the_chickens
-=> END
+		fed_the_chickens = true
+		=> END
+
 elif onQuest_babcia == false
 	Ty: Pani Krysia ma dużo kurczaków.
 	Ty: Wyglądacie na głodne.
-elif Quest_babcia_done == true and fed_the_chickens == true
+	=> END
+
+elif completed_babcia == true and fed_the_chickens == true
 	Ty: Już dostałyście jedzenie.
-else 
+	=> END
+
+else
 	Ty: Niedługo dostaniecie jeść!
-	
+	=> END
