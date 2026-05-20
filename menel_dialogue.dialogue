@@ -1,14 +1,24 @@
 ~ Dominik_quest_dialogue
 if onQuest_Dominik == false
-	Dominik: Kierowniku! Kierowniku! Poratuj, pięć złotych potrzebuję, no wiesz, na jakieś piwko.
-	Ty: Wybacz, Dominiku, nie mam przy sobie portfela. Czy mogę pomóc ci w inny sposób?
-	Dominik: Jakbyś był tak miły i pomógł mi zebrać butelki, kierowniku. Oddam je na kaucję!
-	Ty: No dobrze, pomogę ci. Czy w zamian pomógłbyś mi zbudować zagrodę dla kurczaka?
-	Dominik:  Znalazłeś już swojego kurczaka?! Gratulacje, kierowniku! Oczywiście, że pomogę!
+	Dominik: Kierowniku! Kierowniku! Poratuj, pięć złotych potrzebuję. No wiesz… na jakieś piwko.
+	Ty: Wybacz, Dominiku, nie mam przy sobie portfela.
+	Ty: Czy mogę pomóc ci w inny sposób?
+	Dominik: Jakbyś był tak miły i pomógł mi zebrać butelki, kierowniku.
+	Dominik: Oddam je na kaucję!
+	Ty: No dobrze, pomogę ci.
+	Ty: Czy w zamian pomógłbyś mi zbudować zagrodę dla kurczaka?
+	Dominik: Znalazłeś już swojego kurczaka?!
+	Dominik: Gratulacje, kierowniku!
+	Dominik: Oczywiście, że pomogę!
+	~ onQuest_Dominik = true
+	Zadanie: Zbierz butelki dla Dominika.
+
+	=> END
+
 elif onQuest_Dominik == true
 	Dominik: Kierowniku! Wróciłeś! To jak, masz te butelki?
 	Ty: Tak, trzymaj.
-	if butelki > 9
+	if bottles > 9
 		Dominik: Aż tyle?! Dziękuję! Pomogę ci zbudować najładniejszą zagrodę we wsi!
 	else
 		Dominik: Dzięki, kierowniku! Pomogę ci z tą zagrodą! 
@@ -16,6 +26,7 @@ elif onQuest_Dominik == true
 	Ty: W sumie to nie. Skoro to tylko jeden kurczak to metr na metr chyba mu starczy, prawda?
 	Dominik: Kierowniku! Bój się boga! Kurczaki potrzebują minimum czterech metrów kwadratowych przestrzeni!
 	Ty: Nie wiedziałem o tym, dziękuję, Dominiku.
+
 else
 	% Menel: Kiedyś byłem niesamowitym prawnikiem, a potem dostałem strzałą w kolano.
 	% Menel: Kierowniku, zastanawiałeś się kiedyś… Dokąd nocą tupta jeż?
