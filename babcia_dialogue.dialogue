@@ -2,35 +2,53 @@
 if onQuest_babcia == false
 	Babcia: Ah, młodziutki! Wszystkiego najlepszego! Pomógłbyś starszej pani?
 	Ty: Dziękuję! W czym mogę pomóc, pani Krysiu?
-	Babcia: Widzisz, zamówiłam paszę dla moich kurek ale te worki są takie ciężkie!
+	Babcia: Widzisz, zamówiłam paszę dla moich kurek, ale te worki są takie ciężkie!
 	Babcia: Bogumił zazwyczaj dostarcza je osobiście, ale powiedział, że dzisiaj ma dużo pracy.
-	Ty: Zaraz po nie pobiegnę, niech się pani nie martwi.
+	Ty: Zaraz po nie pobiegnę. Niech się pani nie martwi.
 	Babcia: Dziękuję, kochaniutki!
+	~ onQuest_babcia = true
+	Zadanie: Odbierz ziarno od Bogumiła.
 	=> END
-elif onQuest_babcia == true and ziarno < 1
-	Babcia: Wróć jak odbierzesz ziarno od Bogumiła, kochaniutki.
+
+elif onQuest_babcia == true and completed_babcia == false and ziarno < 1
+	Babcia: Wróć, jak odbierzesz ziarno od Bogumiła, kochaniutki.
 	Babcia: Powinien być w swoim sklepie.
 	=> END
-elif onQuest_babcia == true and ziarno > 0
+
+elif onQuest_babcia == true and completed_babcia == false and ziarno > 0
 	Babcia: Dziękuję ci bardzo!
-	Babcia: Nie mam już tej siły co kiedyś, a małe kurczęta muszą być karmione nawet 4 razy dziennie. Brakuje mi kogoś do pomocy.
-	Ty: 4 razy dziennie? To brzmi jak dużo roboty… Co z dorosłymi kurczakami?
-	Babcia: Ah, są absolutnie warte roboty!
-	Babcia: Jak podrosną będą potrzebowały paszy tylko raz albo dwa razy dziennie. 
-	Ty: Dziękuję, pan Bogumił mówił, że wiele mogę się od pani nauczyć.
-	Babcia: To bardzo miłe z jego strony, jeśli chcesz, wpadnij kiedyś na herbatkę, opowiem ci trochę więcej.
-	Babcia: Ah, w ramach podziękowania, możesz wziąć jeden z worków, na pewno ci się przyda.
-	Ty: Dziękuję bardzo, pani Krysiu. Na pewno wpadnę kiedyś na herbatę.
+	~ ziarno -= 1
+	~ completed_babcia = true
+	~ completed_quests += 1
+	Babcia: Nie mam już tej siły co kiedyś, a małe kurczęta muszą być karmione nawet 4 razy dziennie.
+	Babcia: Brakuje mi kogoś do pomocy.
+	Ty: 4 razy dziennie? To brzmi jak dużo roboty…
+	Ty: Co z dorosłymi kurczakami?
+	Babcia: Ah, są absolutnie warte tej roboty!
+	Babcia: Jak podrosną, będą potrzebowały paszy tylko raz albo dwa razy dziennie.
+	Ty: Dziękuję. Pan Bogumił mówił, że wiele mogę się od pani nauczyć.
+	Babcia: To bardzo miłe z jego strony.
+	Babcia: Jeśli chcesz, wpadnij kiedyś na herbatkę. Opowiem ci trochę więcej.
+	Babcia: Ah, w ramach podziękowania możesz wziąć jeden z worków.
+	Babcia: Na pewno ci się przyda.
+	~ ziarno += 1
+	Ty: Dziękuję bardzo, pani Krysiu.
+	Ty: Na pewno kiedyś wpadnę na herbatę.
+	Zadanie ukończone: Pomoc Babci Krysi.
 	=> END
+
 elif onQuest_Dominik == true and asked_babcia == false
 	Ty: Pani Krysiu, czy miałaby pani jakieś plastikowe butelki?
-	Babcia: Butelki? Czy ten pijak znowu zaczepiał cię o pieniądze?! Nic mu nie dam!
+	~ asked_babcia = true
+	Babcia: Butelki?!
+	Babcia: Czy ten pijak znowu zaczepiał cię o pieniądze?!
+	Babcia: Nic mu nie dam!
+	=> END
+
 else
-	% Babcia: Wpadłbyś kiedyś na herbatke do starszej pani, młodziutki?
-	% Babcia: Ach, młodziutki, tu jesteś! Kliknęłam coś w telefonie i teraz wszystko jest po Chińsku...
+	% Babcia: Wpadłbyś kiedyś na herbatkę do starszej pani, młodziutki?
+	% Babcia: Ach, młodziutki, tu jesteś! Kliknęłam coś w telefonie i teraz wszystko jest po chińsku...
 	% Babcia: W krzyżu łupie, w kolanie strzyka. Widzisz, starość nie radość.
-	% Babcia: Zrobiłam trochę za dużo jabłecznika, weź do domu, powiedz mi jak ci smakował!
+	% Babcia: Zrobiłam trochę za dużo jabłecznika. Weź do domu i powiedz mi, jak ci smakował!
 
-
-
-=> END
+	=> END
