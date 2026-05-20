@@ -15,6 +15,7 @@ VAR onQuest_babcia = false
 VAR completed_babcia = false
 
 VAR onQuest_Dominik = false
+VAR completed_Dominik = false
 
 VAR asked_babcia = false
 VAR received_bottles = false
