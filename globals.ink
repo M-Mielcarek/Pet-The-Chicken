@@ -23,3 +23,5 @@ VAR bottles = 0
 VAR ziarno = 0
 
 VAR triki_na_trzepaku = false
+
+VAR fed_the_chickens = false
