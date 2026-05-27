@@ -8,7 +8,7 @@ if onQuest_babcia == false
 	Babcia: Bogumił zazwyczaj dostarcza je osobiście, ale powiedział, że dzisiaj ma dużo pracy.
 	Ty: Zaraz po nie pobiegnę. Niech się pani nie martwi.
 	Babcia: Dziękuję, kochaniutki!
-	~onQuest_babcia = true
+	set onQuest_babcia = true
 	Zadanie: Odbierz ziarno od Bogumiła.
 	=> END
 
@@ -19,9 +19,9 @@ elif onQuest_babcia == true and completed_babcia == false and ziarno < 1
 
 elif onQuest_babcia == true and completed_babcia == false and ziarno > 0
 	Babcia: Dziękuję ci bardzo!
-	~ziarno -= 1
-	~completed_babcia = true
-	~completed_quests += 1
+	set ziarno -= 1
+	set completed_babcia = true
+	set completed_quests += 1
 	Babcia: Nie mam już tej siły co kiedyś, a małe kurczęta muszą być karmione nawet 4 razy dziennie.
 	Babcia: Brakuje mi kogoś do pomocy.
 	Ty: 4 razy dziennie? To brzmi jak dużo roboty…
@@ -33,7 +33,7 @@ elif onQuest_babcia == true and completed_babcia == false and ziarno > 0
 	Babcia: Jeśli chcesz, wpadnij kiedyś na herbatkę. Opowiem ci trochę więcej.
 	Babcia: Ah, w ramach podziękowania możesz wziąć jeden z worków.
 	Babcia: Na pewno ci się przyda.
-	~ziarno += 1
+	set ziarno += 1
 	Ty: Dziękuję bardzo, pani Krysiu.
 	Ty: Na pewno kiedyś wpadnę na herbatę.
 	Zadanie ukończone: Pomoc Babci Krysi.
@@ -41,7 +41,7 @@ elif onQuest_babcia == true and completed_babcia == false and ziarno > 0
 
 elif onQuest_Dominik == true and asked_babcia == false
 	Ty: Pani Krysiu, czy miałaby pani jakieś plastikowe butelki?
-	~asked_babcia = true
+	set asked_babcia = true
 	Babcia: Butelki?!
 	Babcia: Czy ten pijak znowu zaczepiał cię o pieniądze?!
 	Babcia: Nic mu nie dam!
