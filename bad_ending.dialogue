@@ -1,0 +1,11 @@
+INCLUDE globals.ink
+
+~ bad_ending
+if failed_quiz == true
+	Narrator: Po usłyszeniu tych słów straciłeś grunt pod nogami.
+	Narrator: Wybiegłeś ze sklepu, nie chcąc myśleć o tym, co stanie się z twoją bratnią duszą.
+	Narrator: Kilka razy, odwiedzając sklep Kukuryku, widziałeś jeszcze kurczaczka na zapleczu. Jednak pewnego dnia zniknął i już nigdy więcej się nie pojawił.
+	Narrator: Od tamtej pory Bogumił patrzył na ciebie ze współczuciem.
+	Narrator: Nigdy nie powiedział ci, co stało się z małym kurczakiem…
+	Narrator: Choć w głębi duszy znałeś odpowiedź.
+=> END
