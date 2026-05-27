@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 
 ~ Wet_quest_dialogue
-if onQuest_wet
+if not onQuest_wet
 	Weterynarz: Młody! Jesteś w samą porę, potrzebuję kogoś do pomocy!
 	Ty: O co chodzi?
 	Weterynarz: Widzisz, przed chwilą z kliniki uciekł mi pacjent. Pani Krysia mnie zabije jeśli jej powiem! Musisz szybko odnaleźć jej kurczaka!
