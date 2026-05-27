@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 
 ~ babcia_quest_dialogue
-if onQuest_babcia == false
+if not onQuest_babcia
 	Babcia: Ah, młodziutki! Wszystkiego najlepszego! Pomógłbyś starszej pani?
 	Ty: Dziękuję! W czym mogę pomóc, pani Krysiu?
 	Babcia: Widzisz, zamówiłam paszę dla moich kurek, ale te worki są takie ciężkie!
@@ -12,12 +12,12 @@ if onQuest_babcia == false
 	Zadanie: Odbierz ziarno od Bogumiła.
 	=> END
 
-elif onQuest_babcia == true and completed_babcia == false and ziarno < 1
+elif onQuest_babcia and not completed_babcia and ziarno < 1
 	Babcia: Wróć, jak odbierzesz ziarno od Bogumiła, kochaniutki.
 	Babcia: Powinien być w swoim sklepie.
 	=> END
 
-elif onQuest_babcia == true and completed_babcia == false and ziarno > 0
+elif onQuest_babcia and not completed_babcia and ziarno > 0
 	Babcia: Dziękuję ci bardzo!
 	set ziarno -= 1
 	set completed_babcia = true
@@ -39,7 +39,7 @@ elif onQuest_babcia == true and completed_babcia == false and ziarno > 0
 	Zadanie ukończone: Pomoc Babci Krysi.
 	=> END
 
-elif onQuest_Dominik == true and asked_babcia == false
+elif onQuest_Dominik and not asked_babcia
 	Ty: Pani Krysiu, czy miałaby pani jakieś plastikowe butelki?
 	set asked_babcia = true
 	Babcia: Butelki?!
