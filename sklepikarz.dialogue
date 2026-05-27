@@ -191,6 +191,7 @@ poprawne_odpowiedzi = 0
     else
         Sklepikarz: Przykro mi, młody.
         Sklepikarz: Chyba nie jesteś jeszcze gotowy na posiadanie kurczaka…
+		~failed_quiz == true
     endif
 
 else
