@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cqgq3kvil1nm3"]
+
+[ext_resource type="Script" uid="uid://diu4c4fnd5jf4" path="res://bad_ending.gd" id="1_lrv5w"]
+[ext_resource type="Texture2D" uid="uid://ch1ru5il1al26" path="res://characters/Koncowy5.jpg" id="2_ipj1m"]
+
+[node name="Node2D" type="Node2D" unique_id=1685011483]
+position = Vector2(-1347, -1001)
+script = ExtResource("1_lrv5w")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1158176157]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=985048940]
+offset_left = -599.0
+offset_top = -331.0
+offset_right = 601.0
+offset_bottom = 869.0
+scale = Vector2(1, 0.60000026)
+texture = ExtResource("2_ipj1m")
