@@ -12,7 +12,7 @@ if onQuest_sasiadka == false
 	Sąsiadka: Tylko widzisz… totalnie zapomniałam, o co w niej chodziło…
 	Ty: Jak brzmi podpowiedź?
 
-	~onQuest_sasiadka = true
+	set onQuest_sasiadka = true
 	~Zagadka
 	Sąsiadka: Podpowiedź brzmi: „Łeóónre”.
 	~Again
@@ -60,9 +60,9 @@ if onQuest_sasiadka == false
 	Sąsiadka: Nie ma sprawy!
 	Sąsiadka: Powodzenia z kurczakiem!
 
-	~completed_sasiadka = true
-	~completed_quests += 1
-	~has_heater = true
+	set completed_sasiadka = true
+	set completed_quests += 1
+	set has_heater = true
 
 	Zadanie ukończone: Pomoc sąsiadce.
 	Zadanie: Otrzymujesz farelkę.
@@ -72,7 +72,7 @@ elif onQuest_Dominik == true and asked_sasiadka == false
 	Ty: Aurelio, czy masz może jakieś butelki do oddania?
 	Sąsiadka: Butelki…?
 	Sąsiadka: Nie, nie mam żadnych butelek.
-	~asked_sasiadka = true
+	set asked_sasiadka = true
 	=> END
 
 else
