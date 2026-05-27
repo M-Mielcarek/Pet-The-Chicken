@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 
 ~ Dominik_quest_dialogue
-if onQuest_Dominik == false
+if not onQuest_Dominik
 	Dominik: Kierowniku! Kierowniku! Poratuj, pięć złotych potrzebuję. No wiesz… na jakieś piwko.
 	Ty: Wybacz, Dominiku, nie mam przy sobie portfela.
 	Ty: Czy mogę pomóc ci w inny sposób?
@@ -17,7 +17,7 @@ if onQuest_Dominik == false
 
 	=> END
 
-elif onQuest_Dominik == true
+elif onQuest_Dominik
 	Dominik: Kierowniku! Wróciłeś! To jak, masz te butelki?
 	Ty: Tak, trzymaj.
 	if bottles > 9
