@@ -18,7 +18,7 @@ Sklepikarz: Młody! Przyszedłeś w poszukiwaniach swojego kurczaka?
     -> shop
 
 - Ty: Co…? Przyszedłem tylko po chleb.
-    set just_bread == true
+    set just_bread = true
     -> END
 
 
@@ -42,7 +42,7 @@ Kurczak Karol: *dziobie w Twoim kierunku*
 	- Ty: Wow! Ten zdecydowanie mnie nie lubi…
 	- Ty: Słodki… Ale nie czuję z nim więzi.
 
-if talked_chicken1 == false
+if not talked_chicken1
     set talked_chicken1 = true
     set talked_with_chickens += 1
 endif
@@ -57,7 +57,7 @@ endif
 Kurczak Karina: *nie zwraca na ciebie uwagi*
 	- Ty: Hmm… Nic szczególnego.
 
-if talked_chicken2 == false
+if not talked_chicken2
     set talked_chicken2 = true
     set talked_with_chickens += 1
 endif
@@ -73,7 +73,7 @@ Kurczak Kasia: *gdacze*
 	- Ty: Ten też nie wydaje się specjalny…
 	- Ty: Ten wygląda, jakby chciał przede mną uciec!
 
-if talked_chicken3 == false
+if not talked_chicken3
     set talked_chicken3 = true
     set talked_with_chickens += 1
 endif
@@ -191,12 +191,12 @@ set poprawne_odpowiedzi = 0
     else
         Sklepikarz: Przykro mi, młody.
         Sklepikarz: Chyba nie jesteś jeszcze gotowy na posiadanie kurczaka…
-		set failed_quiz == true
+		set failed_quiz = true
     endif
 
 else
 
-    if onQuest_Dominik == true and received_bottles == false
+    if onQuest_Dominik and not received_bottles
 
         Ty: Czy ma Pan jakieś butelki albo puszki do oddania?
         Sklepikarz: Pewnie, akurat miałem je wyrzucić. Trzymaj!
