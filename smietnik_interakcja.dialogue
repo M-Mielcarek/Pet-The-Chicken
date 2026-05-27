@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 
 ~ start
-if onQuest_Dominik == true and zebrano_butelki == false
+if onQuest_Dominik and not zebrano_butelki
 	Ty: Może tutaj znajdę butelki dla Dominika.
 	set bottles =+2
 	Zadanie: *Zbierasz 2 butelki*
