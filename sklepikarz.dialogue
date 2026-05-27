@@ -18,22 +18,22 @@ Sklepikarz: Młody! Przyszedłeś w poszukiwaniach swojego kurczaka?
     -> shop
 
 - Ty: Co…? Przyszedłem tylko po chleb.
-    ~just_bread == true
+    set just_bread == true
     -> END
 
 
 ~shop
-- [Podejdź do Karola.]
+- *Podejdź do Karola.*
     -> int_chicken1
 
-- [Podejdź do Kariny.]
+- *Podejdź do Kariny.*
     -> int_chicken2
 
-- [Podejdź do Kasi.]
+- *Podejdź do Kasi.*
     -> int_chicken3
 
 if talked_with_chickens >= 3
-    + [Wróć do Sklepikarza.]
+    - *Wróć do Sklepikarza.*
         -> after_chickens
 endif
 
@@ -43,8 +43,8 @@ Kurczak Karol: *dziobie w Twoim kierunku*
 	- Ty: Słodki… Ale nie czuję z nim więzi.
 
 if talked_chicken1 == false
-    talked_chicken1 = true
-    talked_with_chickens += 1
+    set talked_chicken1 = true
+    set talked_with_chickens += 1
 endif
 
 if talked_with_chickens >= 3
@@ -58,8 +58,8 @@ Kurczak Karina: *nie zwraca na ciebie uwagi*
 	- Ty: Hmm… Nic szczególnego.
 
 if talked_chicken2 == false
-    talked_chicken2 = true
-    talked_with_chickens += 1
+    set talked_chicken2 = true
+    set talked_with_chickens += 1
 endif
 
 if talked_with_chickens >= 3
@@ -74,8 +74,8 @@ Kurczak Kasia: *gdacze*
 	- Ty: Ten wygląda, jakby chciał przede mną uciec!
 
 if talked_chicken3 == false
-    ~ talked_chicken3 = true
-    ~ talked_with_chickens += 1
+    set talked_chicken3 = true
+    set talked_with_chickens += 1
 endif
 
 if talked_with_chickens >= 3
@@ -93,7 +93,7 @@ Sklepikarz: Jest mały i słaby, bez opieki może w każdej chwili umrzeć.
 Ty: Chciałbym go zobaczyć.
 Sklepikarz: To poczekaj tu chwilę.
 
-$> triki_na_trzepaku
+do wait(0.5)
 
 Ty: Bogumile! Myślę, że to on! Czy mogę go wziąć?
 
@@ -122,13 +122,13 @@ Sklepikarz: Grit to takie małe kamyczki — pomaga kurczakom rozdrabniać pokar
 Sklepikarz: A teraz leć już, masz jeszcze wiele do roboty!
 Zadanie: Zdobądź lampę grzewczą, kurnik, zagrodę i karmę.
 
-onChickenQuest = true
+set onChickenQuest = true
 -> END
 
 
 ~quiz 
 if completed_quests >= 3
-poprawne_odpowiedzi = 0
+set poprawne_odpowiedzi = 0
 
     Sklepikarz: Już wróciłeś?
     Sklepikarz: Udało ci się wszystko zdobyć?
@@ -142,14 +142,14 @@ poprawne_odpowiedzi = 0
         - Ty: Aby lepiej przyswajały pokarm.
 
     	- Ty: Aby lepiej rozdrabniały pokarm.
-        ~ poprawne_odpowiedzi += 1
+        set poprawne_odpowiedzi += 1
 
         - Ty: Aby miały więcej energii.
 
     Sklepikarz: Ile razy dziennie karmi się kurczaki?
 
     	-Ty: Dorosłe 1-2 razy dziennie, młode 3-4 razy.
-        ~ poprawne_odpowiedzi += 1
+        set poprawne_odpowiedzi += 1
 
     	-Ty: Dorosłe 1 raz dziennie, młode 2 razy.
 
@@ -163,21 +163,21 @@ poprawne_odpowiedzi = 0
         -Ty: 10.
 
     	-Ty: 4.
-        ~ poprawne_odpowiedzi += 1
+        set poprawne_odpowiedzi += 1
 
     Sklepikarz: Jaki przedział temperatury należy zapewnić kurczakowi w pierwszym tygodniu życia?
 
         -Ty: 30-32°C.
 
         -Ty: 32-35°C.
-        ~ poprawne_odpowiedzi += 1
+        set poprawne_odpowiedzi += 1
 
         -Ty: 35-40°C.
 
     Sklepikarz: Aby utrzymać higienę, kurczaki biorą jakie kąpiele?
 
         -Ty: W piasku.
-        ~ poprawne_odpowiedzi += 1
+        set poprawne_odpowiedzi += 1
 
         -Ty: W błocie.
 
@@ -186,12 +186,12 @@ poprawne_odpowiedzi = 0
     if poprawne_odpowiedzi >= 5
         Sklepikarz: Dobrze się sprawiłeś.
         Sklepikarz: Kurczak jest twój.
-        ~ received_chicken = true
+        set received_chicken = true
 
     else
         Sklepikarz: Przykro mi, młody.
         Sklepikarz: Chyba nie jesteś jeszcze gotowy na posiadanie kurczaka…
-		~failed_quiz == true
+		set failed_quiz == true
     endif
 
 else
@@ -201,8 +201,8 @@ else
         Ty: Czy ma Pan jakieś butelki albo puszki do oddania?
         Sklepikarz: Pewnie, akurat miałem je wyrzucić. Trzymaj!
 
-        bottles += 5
-        received_bottles = true
+        set bottles += 5
+        set received_bottles = true
         Zadanie: Otrzymujesz 5 butelek.
     else
         Sklepikarz: Młody, wróć do mnie, jak już będziesz gotowy.
