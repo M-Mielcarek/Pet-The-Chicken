@@ -1,10 +1,9 @@
 INCLUDE globals.ink
 
 ~ good_ending
-if received_chicken == true and fed_the_chickens == false and bottles < 9
-	Narrator: Bogumił wręczył ci kurczaka, patrząc na ciebie z dumą.
-	Narrator: Szczęśliwy wróciłeś do domu, gdzie wszystko było już gotowe na przybycie twojej nowej bratniej duszy.
-	Narrator: Płot zbudowany przez Dominika, pasza od pani Krysi, kurnik wybrany przez Ludwika i farelka od sąsiadki - choć zagroda nie należała do najpiękniejszych, była nowym domem dla twojego najlepszego przyjaciela.
-	Narrator: Kurczak zadomowił się w nowym miejscu, choć wymagało to od ciebie dużo starań, a dzięki twojej opiece jego stan poprawiał się z dnia na dzień.
-	Narrator: Ty i twój kurczak żyliście długo i szczęśliwie.
+Narrator: Bogumił wręczył ci kurczaka, patrząc na ciebie z dumą.
+Narrator: Szczęśliwy wróciłeś do domu, gdzie wszystko było już gotowe na przybycie twojej nowej bratniej duszy.
+Narrator: Płot zbudowany przez Dominika, pasza od pani Krysi, kurnik wybrany przez Ludwika i farelka od sąsiadki - choć zagroda nie należała do najpiękniejszych, była nowym domem dla twojego najlepszego przyjaciela.
+Narrator: Kurczak zadomowił się w nowym miejscu, choć wymagało to od ciebie dużo starań, a dzięki twojej opiece jego stan poprawiał się z dnia na dzień.
+Narrator: Ty i twój kurczak żyliście długo i szczęśliwie.
 => END
