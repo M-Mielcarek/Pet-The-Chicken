@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 
 ~ start
-if completed_babcia and not fed_the_chickens == false
+if completed_babcia and not fed_the_chickens
 	Ty: Dobrze byłoby pomóc pani Krysi.
 	Ty: Biedna… Na stare lata dalej sama musi karmić kurczaki.
 		- Nakarm kurczaki.
