@@ -11,7 +11,7 @@ if completed_babcia == true and fed_the_chickens == false
 		Ty: Mam nadzieję, że niedługo też będę mieć małego kurczaczka.
 		Zadanie: *Nachylasz się nad płotem i głaszczesz kurczaka pani Krysi.*
 		Ty: Macie bardzo przyjemne w dotyku pióra.
-		~fed_the_chickens = true
+		set fed_the_chickens = true
 		=> END
 
 elif onQuest_babcia == false
