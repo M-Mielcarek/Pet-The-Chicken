@@ -35,3 +35,5 @@ VAR completed_sasiadka = false
 VAR asked_sasiadka = false
 
 VAR has_heater = false
+
+VAR just_bread = false
