@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 
 ~ start
-if completed_babcia == true and fed_the_chickens == false
+if completed_babcia and not fed_the_chickens == false
 	Ty: Dobrze byłoby pomóc pani Krysi.
 	Ty: Biedna… Na stare lata dalej sama musi karmić kurczaki.
 		- Nakarm kurczaki.
@@ -14,12 +14,12 @@ if completed_babcia == true and fed_the_chickens == false
 		set fed_the_chickens = true
 		=> END
 
-elif onQuest_babcia == false
+elif not onQuest_babcia
 	Ty: Pani Krysia ma dużo kurczaków.
 	Ty: Wyglądacie na głodne.
 	=> END
 
-elif completed_babcia == true and fed_the_chickens == true
+elif completed_babcia and fed_the_chickens
 	Ty: Już dostałyście jedzenie.
 	=> END
 
