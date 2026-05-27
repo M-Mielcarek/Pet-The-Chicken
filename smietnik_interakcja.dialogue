@@ -3,7 +3,7 @@ INCLUDE globals.ink
 ~ start
 if onQuest_Dominik == true and zebrano_butelki == false
 	Ty: Może tutaj znajdę butelki dla Dominika.
-	$> bottles =+2
+	set bottles =+2
 	Zadanie: *Zbierasz 2 butelki*
 else
 	Ty: To tylko kosz.
