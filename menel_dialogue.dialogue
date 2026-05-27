@@ -1,3 +1,5 @@
+INCLUDE globals.ink
+
 ~ Dominik_quest_dialogue
 if onQuest_Dominik == false
 	Dominik: Kierowniku! Kierowniku! Poratuj, pięć złotych potrzebuję. No wiesz… na jakieś piwko.
@@ -10,7 +12,7 @@ if onQuest_Dominik == false
 	Dominik: Znalazłeś już swojego kurczaka?!
 	Dominik: Gratulacje, kierowniku!
 	Dominik: Oczywiście, że pomogę!
-	~ onQuest_Dominik = true
+	~onQuest_Dominik = true
 	Zadanie: Zbierz butelki dla Dominika.
 
 	=> END
