@@ -36,7 +36,8 @@ VAR asked_sasiadka = false
 
 VAR has_heater = false
 
-VAr onQuest_wet = false
+VAR onQuest_wet = false
 VAR completed_wet = false
+VAR asked_wet = false
 
 VAR just_bread = false
