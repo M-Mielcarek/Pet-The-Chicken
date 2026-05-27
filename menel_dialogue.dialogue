@@ -12,7 +12,7 @@ if onQuest_Dominik == false
 	Dominik: Znalazłeś już swojego kurczaka?!
 	Dominik: Gratulacje, kierowniku!
 	Dominik: Oczywiście, że pomogę!
-	~onQuest_Dominik = true
+	set onQuest_Dominik = true
 	Zadanie: Zbierz butelki dla Dominika.
 
 	=> END
