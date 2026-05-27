@@ -1,28 +1,31 @@
 INCLUDE globals.ink
 
 ~ Wet_quest_dialogue
-if onQuest_wet == false
+if onQuest_wet
 	Weterynarz: Młody! Jesteś w samą porę, potrzebuję kogoś do pomocy!
 	Ty: O co chodzi?
 	Weterynarz: Widzisz, przed chwilą z kliniki uciekł mi pacjent. Pani Krysia mnie zabije jeśli jej powiem! Musisz szybko odnaleźć jej kurczaka!
 	Ty: Oczywiście! Czy jest coś, po czym go poznam?
 	Weterynarz: (insert opis)
 	Ty: Już biegnę go szukać!
-elif onQuest_wet == true and has_kurczak == true
+	set onQuest_wet = true
+elif onQuest_wet and not has_kurczak
 	Weterynarz: Dziękuję! Nie wiem co bym zrobił bez twojej pomocy! Nie mogłem zostawić kliniki. Gdzie go znalazłeś?
-	Ty: Nie ma sprawy. Był (to be determined). Tarzał się w piasku.
+	Ty: Nie ma sprawy. Był w polu za kliniką. Tarzał się w piasku.
 	Weterynarz: Uciekł, żeby wziąć kąpiel piaskową? Hah, to dopiero ciekawe! Czy wiedziałeś, że właśnie tak kurczaki dbają o swoją higienę? 
 	Ty: Nie, nie wiedziałem.
 	Weterynarz: Mam dużo takich ciekawostek, ale to na później. Potrzebowałeś czegoś?
 	Ty: Właściwie to tak, chciałem zapytać, czy mógłbyś pomóc mi w wyborze kurnika. Bogumił powiedział, że nie wyda mi kurczaka zanim nie będę miał wszystkiego, czego potrzebuje.
 	Weterynarz: Kurnika? Ależ oczywiście! Potraktuj to jako prezent urodzinowy ode mnie. 
 	Ty: Dziękuję, Ludwiku!
-elif onQuest_wet == true and has_kurczak == false
+	set completed_wet = true
+elif onQuest_wet and not has_kurczak
 	Weterynarz: Nie możesz go znaleźć? Może spróbuj za kliniką?
 	Ty: Dziękuję, poszukam tam. 
-elif onQuest_Dominik == true and asked_wet == false
+elif onQuest_Dominik and not asked_wet
 	Ty: Ludwiku! Czy miałbyś może parę plastikowych butelek?
 	Weterynarz: Butelki, mówisz? Przykro mi, wyrzuciłem je wczoraj.
+	set asked_wet = true
 else
 	% Weterynarz: Czy wiedziałeś, że kury są dalekimi potomkami dinozaurów?
 	% Weterynarz: Czy wiedziałes, że kury, podobnie jak ludzie, miewają dobre i złe sny?
