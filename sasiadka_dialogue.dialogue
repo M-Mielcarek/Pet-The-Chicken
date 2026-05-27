@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 
 ~ Sasiadka_quest_dialogue
-if onQuest_sasiadka
+if not onQuest_sasiadka
 	Sąsiadka: Hej! Dobrze, że jesteś! Potrzebuję twojej pomocy!
 	Ty: Pomocy? Co się stało?
 	Sąsiadka: Słuchaj, głupia sprawa…
