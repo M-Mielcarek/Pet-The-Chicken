@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 
 ~ Sasiadka_quest_dialogue
-if onQuest_sasiadka == false
+if onQuest_sasiadka
 	Sąsiadka: Hej! Dobrze, że jesteś! Potrzebuję twojej pomocy!
 	Ty: Pomocy? Co się stało?
 	Sąsiadka: Słuchaj, głupia sprawa…
@@ -68,7 +68,7 @@ if onQuest_sasiadka == false
 	Zadanie: Otrzymujesz farelkę.
 	=> END
 
-elif onQuest_Dominik == true and asked_sasiadka == false
+elif onQuest_Dominik and not asked_sasiadka == false
 	Ty: Aurelio, czy masz może jakieś butelki do oddania?
 	Sąsiadka: Butelki…?
 	Sąsiadka: Nie, nie mam żadnych butelek.
