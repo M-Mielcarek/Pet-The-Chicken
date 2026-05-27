@@ -1,3 +1,5 @@
+INCLUDE globals.ink
+
 ~ Wet_quest_dialogue
 if onQuest_wet == false
 	Weterynarz: Młody! Jesteś w samą porę, potrzebuję kogoś do pomocy!
