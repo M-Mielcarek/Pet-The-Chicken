@@ -1,5 +1,6 @@
-~ Sasiadka_quest_dialogue
+INCLUDE globals.ink
 
+~ Sasiadka_quest_dialogue
 if onQuest_sasiadka == false
 	Sąsiadka: Hej! Dobrze, że jesteś! Potrzebuję twojej pomocy!
 	Ty: Pomocy? Co się stało?
@@ -11,10 +12,10 @@ if onQuest_sasiadka == false
 	Sąsiadka: Tylko widzisz… totalnie zapomniałam, o co w niej chodziło…
 	Ty: Jak brzmi podpowiedź?
 
-	~ onQuest_sasiadka = true
-	~ Zagadka
+	~onQuest_sasiadka = true
+	~Zagadka
 	Sąsiadka: Podpowiedź brzmi: „Łeóónre”.
-	~ Again
+	~Again
 
 		- Ty: Czy mogłabyś powtórzyć podpowiedź?
 			=> Zagadka
@@ -59,9 +60,9 @@ if onQuest_sasiadka == false
 	Sąsiadka: Nie ma sprawy!
 	Sąsiadka: Powodzenia z kurczakiem!
 
-	~ completed_sasiadka = true
-	~ completed_quests += 1
-	~ has_heater = true
+	~completed_sasiadka = true
+	~completed_quests += 1
+	~has_heater = true
 
 	Zadanie ukończone: Pomoc sąsiadce.
 	Zadanie: Otrzymujesz farelkę.
@@ -71,7 +72,7 @@ elif onQuest_Dominik == true and asked_sasiadka == false
 	Ty: Aurelio, czy masz może jakieś butelki do oddania?
 	Sąsiadka: Butelki…?
 	Sąsiadka: Nie, nie mam żadnych butelek.
-	~ asked_sasiadka = true
+	~asked_sasiadka = true
 	=> END
 
 else
